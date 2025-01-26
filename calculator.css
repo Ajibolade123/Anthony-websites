@@ -88,12 +88,13 @@ transform: translateX(36px)
   display: flex;
   align-items: center;
   justify-content: center;
+   margin-bottom: 10px;
 }
 .theme{
   margin-right: 25px;
   font-size: 12px;
   font-weight: 500;
-  margin: 0 24px 0 0;
+   margin: 15px 24px 0 0;
 }
 .name{
   font-size: 32px;
