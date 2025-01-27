@@ -111,6 +111,11 @@ main{
   justify-content: center;
   height: 100vh
 }
+.numbers{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
 @media (min-width: 768px){
   .container-buttons{
     margin-top: 12px;
