@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To do list</title>
+  <link rel="stylesheet" href="css/todolist.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <div class="background-img">
+      <img class="the-image" src="thumbnails/bg-desktop-dark.jpg" alt="background image">
+      <img class="mobile-img" src="thumbnails/bg-mobile-dark.jpg" alt="background">
+    </div>
+    <div class="container">
+      <div class="name-container"> 
+        <p>TODO</p>
+      </div>
+      <div class="create-container">
+        <div class="add-button">
+          <!-- change this to acheck box and modify the check box to only add when the it is checked and uncheck does not run the code -->
+         <div class="check-box">
+          <input type="checkbox"  id="checks">
+         </div>
+          <input type="text" placeholder="Create a new todo..." class="js-input input-field" >
+        </div>
+        </div>
+      <div class="js-tododisplay display"></div>
+      <div class="states">
+      <div class="total"></div>
+      <div class="filter">
+        <div onclick="setFilter('all')" class="state all">All</div>
+        <div onclick="setFilter('active')" class="state active">Active</div>
+       <div onclick="setFilter('completed')" class="state completed">Completed</div>
+      </div>
+      <div class="completed-todos">Clear Completed</div>
+    </div>
+    <div class="mobile-state">
+      <div class="filter-2">
+        <div onclick="setFilter('all')" class="state all">All</div>
+        <div onclick="setFilter('active')" class="state active">Active</div>
+       <div onclick="setFilter('completed')" class="state completed">Completed</div>
+      </div>
+    </div>
+    <div class="reorder-container">
+      <p>Drag and drop to reorder list</p>
+    </div>
+    </div>
+  </main>
+  <script src="js/todolist.js"></script>
+</body>
+</html>

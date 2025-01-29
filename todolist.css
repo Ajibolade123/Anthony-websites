@@ -1,0 +1,401 @@
+body{
+  padding: 0;
+  margin: 0;
+  font-family: Josefin Sans;
+  background-color:  var(--VeryDarkBlue);
+  padding-bottom: 1000px;
+}
+  /* modify the scroll bar to show only when scrolling */
+::-webkit-scrollbar {
+  width: 0px; 
+}
+
+
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+:root{
+--BrightBlue: hsl(220, 98%, 61%);
+--CheckBackground:  hsl(192, 100%, 67%),hsl(280, 87%, 65%);
+
+
+--VeryDarkBlue: hsl(235, 21%, 11%);
+--VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+--LightGrayishBlue: hsl(234, 39%, 85%);
+--LightGrayishBluehover: hsl(236, 33%, 92%);
+--DarkGrayishBlue: hsl(234, 11%, 52%);
+--VeryDarkGrayishBlue: hsl(233, 14%, 35%);
+--DDarkGrayishBlue: hsl(237, 14%, 26%);
+}
+
+
+
+@media screen and (min-width: 768px) {
+  main{
+    position: relative;
+  }
+.add-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#checks{
+  all: unset;
+  width: 25px;
+  height: 25px;
+  border: 2px solid var(--VeryDarkGrayishBlue);
+  border-radius: 50%;
+  cursor: pointer;
+ 
+}
+#checks:checked{
+background-image: linear-gradient(var(--CheckBackground));
+border: 2px solid var(--VeryDarkDesaturatedBlue);
+}
+.create-container{
+  background-color: var(--VeryDarkDesaturatedBlue);
+  width: 520px;
+  padding: 20px;
+  border-radius: 5px;
+}
+.input-field{
+  all: unset;
+width: 100%;
+padding-left: 5px;
+margin-left: 12px;
+font-size: 18px;
+color: var(--LightGrayishBlue);
+caret-color: var(--BrightBlue);
+}
+.input-field::placeholder{
+  color: var(--DarkGrayishBlue);
+}
+p{
+  margin: 0;
+}
+.name-container{
+  display: flex;
+  align-items: end;
+  width: 555px;
+font-size: 38px;
+font-weight: 700;
+letter-spacing: 0.8rem;
+margin-bottom: 50px;
+color: white;
+}
+.display{
+  margin-top: 25px;
+  background-color: var(--VeryDarkDesaturatedBlue);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.check-2{
+  all: unset;
+  width: 25px;
+  height: 25px;
+  border: 2px solid var(--VeryDarkGrayishBlue);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.check-2:checked{
+background-image: linear-gradient(var(--CheckBackground));
+border: 2px solid var(--VeryDarkDesaturatedBlue);
+}
+/* hover style for the check2 here */
+
+.display-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 520px;
+  padding: 20px;
+  border-bottom: 1px solid var(--VeryDarkGrayishBlue);
+  cursor: pointer;
+}
+.display-container > div{
+  display: flex;
+  align-content: center;
+}
+.todoss{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+  font-size: 18px;
+  color: var(--LightGrayishBlue);
+  font-weight: 400;
+}
+.check-boxs{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.total{
+  display:flex;
+  color: var(--DarkGrayishBlue);
+}
+.filter{
+  display: flex;
+  align-items: center;
+  color: var(--DarkGrayishBlue)
+}
+.filter > div:not(:last-child){
+  margin-right: 15px;
+}
+/* this hover style should not apply to the active ones  */
+.filter > div:hover{
+  color: var(--LightGrayishBlue);
+  cursor: pointer;
+}
+.completed:hover{
+  color: var(--LightGrayishBlue);
+  cursor: pointer;
+}
+.all:hover{
+  color: var(--LightGrayishBlue);
+  cursor: pointer;
+}
+.all:active{
+  color: var(--BrightBlue);
+  cursor: grab;
+}
+.active:hover{
+  color: var(--LightGrayishBlue);
+  cursor: pointer;
+}
+.completed-todos{
+  color: var(--DarkGrayishBlue)
+}
+.completed-todos:hover{
+  color: var(--LightGrayishBluehover);
+  cursor: pointer;
+}
+.states{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: var(--VeryDarkDesaturatedBlue);
+  width: 520px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0px 21px 22px -8px rgba(0,0,0,0.5);
+}
+.delete{
+  visibility: hidden;
+}
+.reorder-container{
+  margin-top: 45px;
+}
+.reorder-container > p{
+  color: var(--DarkGrayishBlue);
+  font-size: 14px;
+}
+.empty{
+  color: var(--LightGrayishBlue);
+  font-size: 16px;
+  background-color: var(--VeryDarkBlue);
+}
+.check-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+.check-mark{
+  position: absolute;
+  content: icon;
+  display: none;
+}
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+}
+.mobile-img {
+  display: none;
+}
+}
+
+
+@media screen  and (min-width: 320px)  and (max-width: 600px) {
+
+ /*  ::-webkit-scrollbar {
+    width: 0px; 
+  } */
+  body{
+    padding-bottom: 0;
+  }
+.add-button{
+  display: flex;
+  align-items: center;
+}
+#checks{
+  all: unset;
+  width: 25px;
+  height: 25px;
+  border: 2px solid var(--VeryDarkGrayishBlue);
+  border-radius: 50%;
+  cursor: pointer;
+ 
+}
+#checks:checked{
+background-image: linear-gradient(var(--CheckBackground));
+border: 2px solid var(--VeryDarkDesaturatedBlue);
+}
+.create-container{
+  background-color: var(--VeryDarkDesaturatedBlue);
+  width: 300px;
+  padding: 20px;
+  border-radius: 5px;
+}
+.input-field{
+  all: unset;
+padding-left: 5px;
+margin-left: 12px;
+font-size: 18px;
+color: var(--LightGrayishBlue);
+caret-color: var(--BrightBlue);
+}
+.input-field::placeholder{
+  color: var(--DarkGrayishBlue);
+}
+p{
+  margin: 0;
+}
+.name-container{
+  display: flex;
+  align-items: end;
+  width: 300px;
+font-size: 32px;
+font-weight: 700;
+letter-spacing: 0.8rem;
+margin-bottom: 65px;
+color: white;
+}
+.display{
+  margin-top: 25px;
+  background-color: var(--VeryDarkDesaturatedBlue);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.check-2{
+  all: unset;
+  width: 25px;
+  height: 25px;
+  border: 2px solid var(--VeryDarkGrayishBlue);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.check-2:checked{
+background-image: linear-gradient(var(--CheckBackground));
+border: 2px solid var(--VeryDarkDesaturatedBlue);
+}
+/* hover style for the check2 here */
+
+.display-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid var(--VeryDarkGrayishBlue);
+  cursor: pointer;
+}
+.display-container > div{
+  display: flex;
+  align-content: center;
+}
+.todoss{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+  font-size: 18px;
+  color: var(--LightGrayishBlue);
+  font-weight: 400;
+}
+.check-boxs{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.total{
+  display:flex;
+  color: var(--DarkGrayishBlue);
+}
+.filter{
+ display: none;
+}
+.filter > div:not(:last-child){
+  margin-right: 15px;
+}
+/* this hover style should not apply to the active ones  */
+.filter > div:hover{
+  color: var(--LightGrayishBlue);
+  cursor: pointer;
+}
+.completed:hover{
+  color: var(--LightGrayishBlue);
+  cursor: pointer;
+}
+.all:hover{
+  color: var(--LightGrayishBlue);
+  cursor: pointer;
+}
+.active:hover{
+  color: var(--LightGrayishBlue);
+  cursor: pointer;
+}
+.completed-todos{
+  color: var(--DarkGrayishBlue)
+}
+.completed-todos:hover{
+  color: var(--LightGrayishBluehover);
+  cursor: pointer;
+}
+.states{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: var(--VeryDarkDesaturatedBlue);
+  width: 300px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0px 21px 22px -8px rgba(0,0,0,0.5);
+}
+.delete{
+  visibility: visible;
+}
+.reorder-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 45px;
+}
+.reorder-container > p{
+  color: var(--DarkGrayishBlue);
+  font-size: 14px;
+}
+.check-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+.the-image{
+  display: none;
+}
+.mobile-img{
+  width: 100%;
+}
+
+}
