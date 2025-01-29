@@ -237,5 +237,8 @@ main{
     align-items: center;
     justify-content: space-between;
   }
+  button{
+    outline: none;
+  }
 }
 /* create the toggle switch */
