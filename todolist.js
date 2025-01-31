@@ -42,7 +42,7 @@ function renderHTML(){
         </div>
       <div
         class="delete" id="delete-space-${index}"
-      ><img src="cross.svg"></div>
+      ><img src="thumbnails/icon-cross.svg"></div>
       </div>`
       todolistHtml += html;
      }
@@ -82,6 +82,13 @@ function saveToLocalStorage(){
  totalTodo();
 }
 
+
+document.getElementById('input-todo')
+.addEventListener('keydown',(event) => {
+  if(event.key === 'Enter'){
+    addtodo()
+   };
+})
 
 
 //there is problem here which is that the ischecked is used globally which resets the checkboxes
