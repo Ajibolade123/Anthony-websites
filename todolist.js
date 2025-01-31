@@ -42,7 +42,7 @@ function renderHTML(){
         </div>
       <div
         class="delete" id="delete-space-${index}"
-      ><img src="icon-cross.svg"></div>
+      ><img src="cross.svg"></div>
       </div>`
       todolistHtml += html;
      }
