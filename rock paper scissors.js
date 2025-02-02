@@ -121,8 +121,8 @@ document.querySelector('.js-result')
 
 document.querySelector('.js-moves')
 .innerHTML = `You 
-<img src="icons/${playerMove}-emoji.png" class="moves"> 
-<img src="icons/${computerMove}-emoji.png" class="moves"> 
+<img src="${playerMove}-emoji.png" class="moves"> 
+<img src="${computerMove}-emoji.png" class="moves"> 
 Computer`;
 }
 //reset
