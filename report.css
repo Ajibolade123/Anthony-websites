@@ -1,0 +1,300 @@
+body,html{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Hanken Grotesk;
+}
+p{
+  margin: 0;
+}
+button{
+  font-family: Hanken Grotesk;
+}
+
+:root{
+  /* primary */
+--Lightred: hsl(0, 100%, 67%);
+--Orangeyyellow: hsl(39, 100%, 56%);
+--Greenteal: hsl(166, 100%, 37%);
+--Cobaltblue: hsl(234, 85%, 45%);
+
+/* gradient */
+ --LightslateblueBackground: hsl(252, 100%, 67%);
+--LightroyalblueBackground: hsl(241, 81%, 54%);
+/* circle */
+--Violetbluecircle: hsla(256, 72%, 46%, 1);
+--Persianbluecircle: hsla(241, 72%, 46%, 0);
+
+/* neutral */
+--White: hsl(0, 0%, 100%);
+--Paleblue: hsl(221, 100%, 96%);
+--Lightlavender: hsl(241, 100%, 89%);
+--Darkgrayblue: hsl(224, 30%, 27%);
+}
+@media screen and (min-width: 580px) {
+  main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .container{
+    display: grid;
+    grid-template-columns: repeat(2, 280px);
+    background-color: var(--White);
+    box-shadow: 13px 7px 25px -5px rgba(0,0,0,0.1);
+    border-top-right-radius: 22px;
+    border-bottom-right-radius: 22px;
+  }
+  .result{
+    border-radius: 22px;
+    background-image: linear-gradient(200deg, var(--LightslateblueBackground), var(--LightroyalblueBackground));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+  .paragraph-1{
+    font-size: 17px;
+    color: var(--Lightlavender);
+    font-weight: 500;
+    margin-bottom: 28px;
+  }
+  .circle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    background-image: linear-gradient(180deg,var(--Violetbluecircle),var(--Persianbluecircle));
+    border-radius: 50%;;
+  }
+  .score{
+    font-size: 52px;
+    font-weight: 700;
+  }
+  .percent{
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--Lightlavender);
+  }
+  .remark-1{
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 28px;
+    margin-bottom: 10px;
+  }
+  .remark{
+    font-size: 13px;
+    color: var(--Lightlavender)
+  }
+  .remark-2{
+    display: none;
+  }
+  .summary p{
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 22px;
+  }
+  .summary{
+    display: flex;
+    flex-direction: column;
+    padding: 26px;
+  }
+  .summaries{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+  .reaction{
+    background-color: hsl(6deg 100% 98.04%);
+    color: var(--Lightred);
+  }
+  .memory{
+    background-color: hsl(36.92deg 100% 97.45%);
+    color: var(--Orangeyyellow);
+  }
+  .verbal{
+    background-color: hsl(174.55deg 57.89% 96.27%);
+    color: var(--Greenteal);
+  }
+  .visual{
+    background-color: hsl(234.55deg 73.33% 97.06%);
+    color: var(--Cobaltblue);
+  }
+  .total{
+    color: hsl(217.78deg 23.48% 22.55%);
+    font-weight: 600;
+    font-size: 14px;
+  }
+  span{
+    color: hsl(0deg 0.99% 60.39%);
+    margin-left: 3px;
+  }
+  .profile-score{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+  img{
+    width: 15px;
+    margin-right: 8px;
+  }
+  .button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  button{
+    width: 100%;
+    padding: 12px 0;
+    font-size: 14px;
+    border: none;
+    background-color:  hsl(217.14deg 32.81% 25.1%);
+    color: white;
+    border-radius: 22px;
+    transition: 0.3s background-image;
+  }
+  /* hover states */
+  button:hover{
+    cursor: pointer;
+    background-image: linear-gradient(180deg,var(--LightslateblueBackground),var(--LightroyalblueBackground));
+  }
+}
+/* small screens */
+@media screen and (max-width: 580px) {
+  body{
+    background-color: var(--White)
+  }
+  .container{
+    display: grid;
+    grid-template-columns: repeat( fit-content, minmax(300px, 1fr));
+    background-color: var(--White);
+  }
+  .result{
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+    background-image: linear-gradient(200deg, var(--LightslateblueBackground), var(--LightroyalblueBackground));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+  .paragraph-1{
+    font-size: 17px;
+    color: var(--Lightlavender);
+    font-weight: 500;
+    margin-bottom: 28px;
+  }
+  .circle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 140px;
+    background-image: linear-gradient(180deg,var(--Violetbluecircle),var(--Persianbluecircle));
+    border-radius: 50%;;
+  }
+  .score{
+    font-size: 50px;
+    font-weight: 700;
+  }
+  .percent{
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--Lightlavender);
+  }
+  .remark-1{
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 28px;
+    margin-bottom: 10px;
+  }
+  .remark{
+    display: none;
+  }
+  .remark-2{
+    font-size: 16px;
+    color: var(--Lightlavender);
+    text-align: center;
+  }
+  .summary p{
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 22px;
+  }
+  .summary{
+    display: flex;
+    flex-direction: column;
+    padding: 26px;
+  }
+  .summaries{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    border-radius: 8px;
+  }
+  .reaction{
+    background-color: hsl(6deg 100% 98.04%);
+    color: var(--Lightred);
+  }
+  .memory{
+    background-color: hsl(36.92deg 100% 97.45%);
+    color: var(--Orangeyyellow);
+  }
+  .verbal{
+    background-color: hsl(174.55deg 57.89% 96.27%);
+    color: var(--Greenteal);
+  }
+  .visual{
+    background-color: hsl(234.55deg 73.33% 97.06%);
+    color: var(--Cobaltblue);
+  }
+  .total{
+    color: hsl(217.78deg 23.48% 22.55%);
+    font-weight: 600;
+    font-size: 16px;
+  }
+  span{
+    color: hsl(0deg 0.99% 60.39%);
+    margin-left: 3px;
+  }
+  .profile-score{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+  img{
+    width: 18px;
+    margin-right: 8px;
+  }
+  .button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  button{
+    width: 100%;
+    padding: 16px 0;
+    font-size: 15px;
+    border: none;
+    background-color:  hsl(217.14deg 32.81% 25.1%);
+    color: white;
+    border-radius: 30px;
+  }
+  button:hover{
+    cursor: pointer;
+    background-image: linear-gradient(180deg,var(--LightslateblueBackground),var(--LightroyalblueBackground));
+  }
+}
